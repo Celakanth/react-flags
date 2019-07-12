@@ -1,0 +1,40 @@
+<link href="./css/languageFlags.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<script>
+    const TheStuff = (lang) => {
+        console.log('I did it', lang)
+    }
+
+</script>
+
+<div id='flagselector'></div>
+<div><input type="button" onClick="flagButtons.setLanguag('US')" value="click me"/></div>
+<script src='https://unpkg.com/react@16.0.0/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js'></script>
+<script src='./js/index.js'></script>
+<script src='https://unpkg.com/popper.js'></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+    var myCountries =
+        [
+            {country: 'gb', language: 'English'},
+            {country: 'us', language: 'English(US)'},
+            {country: 'de', language: 'German', selected: true}
+        ];
+    var myLangauges = [
+        {key: 'en', selected: true},
+        {key: 'ch'},
+        {key: 'ja'}
+    ]
+
+    flagButtons = new FlagButtons()
+    flagButtons.renderLanguageFlags('flagselector', myLangauges, (value) => {
+        console.log('the value is', value)
+    });
+</script>
+

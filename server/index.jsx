@@ -113,7 +113,7 @@ class FlagButtons extends React.Component {
   setLanguageList(defaultList){
     this.languageSet = [];
     this.languages = [];
-    this. tempList = []
+    this.tempList = []
 
     this.setSelectionList();
 
